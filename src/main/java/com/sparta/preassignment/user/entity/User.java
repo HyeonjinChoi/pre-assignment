@@ -35,6 +35,8 @@ public class User {
 	@Column(nullable = false)
 	private UserRoleEnum role;
 
+	private String refreshToken;
+
 	@Builder
 	public User(Long id, String username, String password, String nickname, UserRoleEnum role) {
 		this.id = id;
@@ -42,5 +44,9 @@ public class User {
 		this.password = password;
 		this.nickname = nickname;
 		this.role = role;
+	}
+
+	public void updateRefreshToken(String refreshToken) {
+		this.refreshToken = refreshToken;
 	}
 }
