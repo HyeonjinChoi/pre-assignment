@@ -6,6 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class SignResponseDto {
+
 	private String accessToken;
 	private String refreshToken;
 }
